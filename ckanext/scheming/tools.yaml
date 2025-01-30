@@ -1,0 +1,64 @@
+scheming_version: 2
+dataset_type: tool
+about_url: http://example.com/the-camel-photos-schema
+
+
+dataset_fields:
+
+- field_name: title
+  label: Title
+  preset: title
+  form_placeholder: eg. Larry, Peter, Susan
+
+- field_name: name
+  label: URL
+  preset: dataset_slug
+  form_placeholder: eg. camel-no-5
+
+- field_name: version
+  label: Version
+  validators: ignore_missing unicode_safe package_version_validator
+  form_placeholder: '1.0'
+
+- field_name: maintainer
+  label: Maintainer
+  form_placeholder: Joe Bloggs
+  display_property: dc:contributor
+
+- field_name: prog_language
+  label: Programming Language
+  form_placeholder: eg. Python, Java
+
+- field_name: exec_mode
+  label: Execution Mode
+  form_placeholder: 
+
+- field_name: author
+  label: Author
+  form_placeholder: Joe Bloggs
+  display_property: dc:creator
+
+- field_name: owner_org
+  label: Organization
+  preset: dataset_organization
+
+- field_name: git_repo_url
+  label: Github Repository URL
+  form_placeholder: http://github.com/dataset.json
+  display_property: foaf:homepage
+  display_snippet: link.html
+
+
+resource_fields:
+
+- field_name: url
+  label: Image URL
+  preset: resource_url_upload
+  form_placeholder: http://example.com/my_image
+  upload_label: tool_image
+
+- field_name: documentation_url
+  label: Documentation URL
+  preset: resource_url_upload
+  form_placeholder: http://example.com/my_image_doc
+  upload_label: documentation_url
