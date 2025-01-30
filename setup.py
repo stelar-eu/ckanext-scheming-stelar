@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 version = '3.0.0'
 
 setup(
-    name='ckanext-scheming',
+    name='ckanext-scheming-stelar',
     version=version,
     description="Easy, sharable custom CKAN schemas",
     long_description="""
